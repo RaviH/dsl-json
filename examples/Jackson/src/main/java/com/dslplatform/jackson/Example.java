@@ -157,7 +157,7 @@ public class Example {
 		//To include Jackson annotations dsljson.jackson=true must be passed to annotation processor
 		//When conversion is not fully supported by compiler Settings.basicSetup() can be enabled to support runtime analysis
 		//for features not registered by annotation processor. Currently it is enabled due to use of Set and Vector
-		DslJson<Object> dslJson = new DslJson<>(Settings.basicSetup());
+		DslJson<Object> dslJson = new DslJson<>(Settings.withRuntime());
 
 		Model instance = new Model();
 		instance.string = "Hello World!";
